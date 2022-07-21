@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/anas/back_end#"
+     xml:base="http://www.semanticweb.org/anas/back_end"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:back_end="http://www.semanticweb.org/anas/back_end#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/anas/back_end"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#has_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anas/back_end#has_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anas/back_end#Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anas/back_end#argument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#return -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anas/back_end#return">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anas/back_end#object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anas/back_end#varable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#commend -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#commend">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#content">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#extensionFile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#extensionFile">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#argument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#path -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#path">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#recommend -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#recommend">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#solutionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#solutionType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#solutionsList -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#solutionsList">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#template -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anas/back_end#template">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#MVC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#MVC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#architecture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#architecture"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#argument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#argument"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#class -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#class"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#code -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#code"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#connction_database -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#connction_database">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#constant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#constant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#controller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#MVC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#database -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#database">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#database_connction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#database_connction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#argument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#file -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#file"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#framework -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#framework"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#geter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#geter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#languages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#languages"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#MVC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#seter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#seter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#solutions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#solutions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#table">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#varable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#varable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#view -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anas/back_end#view">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anas/back_end#MVC"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#cSharp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#cSharp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#languages"/>
+        <extensionFile>CS</extensionFile>
+        <name>c#</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#get_result_from_select_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#get_result_from_select_query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get result from select query</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#java -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#java">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#languages"/>
+        <extensionFile>java</extensionFile>
+        <name>java</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#json -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#json">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#object"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">json</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#laravel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#laravel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#framework"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php laravel</name>
+        <recommend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</recommend>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#node.js -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#node.js">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#languages"/>
+        <extensionFile>js</extensionFile>
+        <name>node.js</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#languages"/>
+        <extensionFile>php</extensionFile>
+        <name>php</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_MVC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_MVC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#MVC"/>
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@ php_with_extend_ModelClass_model
+@ php_with_extend_ModelClass_view
+@ php_with_extend_ModelClass_controller</commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php MVC</name>
+        <recommend rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommend>
+        <rdfs:comment>#model
+#view
+#controller</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_MVC_solutions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_MVC_solutions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#solutions"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php MVC solutions</name>
+        <solutionsList rdf:datatype="http://www.w3.org/2001/XMLSchema#string">with extend ModelClass (recommend)
+without extend ModelClass</solutionsList>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_MVC_with_extentd_ModleClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_MVC_with_extentd_ModleClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#MVC"/>
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@ php_with_extend_ModelClass_model
+@ php_with_extend_ModelClass_view
+@ php_with_extend_ModelClass_controller</commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php MVC with extend ModelClass</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_ModleClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_ModleClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#file"/>
+        <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class ()
+{
+$dataBase=#databaseName
+}</content>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php ModleClass</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_Property -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_Property">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Property"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php property</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$#name</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_argument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_argument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#argument"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php argument</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$#name</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">argument</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_class -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_class">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_Property"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_seter"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php class</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;?php
+OPTINAL(include(&quot;#fileName&quot;))
+class #Class_name OPTINAL(extends #SuperCalssname)
+{
+  //Properties
+  #Properties_list
+ //methods
+  #methods_list
+}
+?&gt;</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;?php
+OPTINAL(include(&quot;#fileName&quot;))
+class #Class_name OPTINAL(extends #SuperCalssname)
+{
+  //Properties
+  #Properties_list
+ //methods
+  #methods_list
+}
+?&gt;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_conncetion_link -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_conncetion_link">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#object"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php conncetion link</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$#link_connction</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object database_connction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_connction_database -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_connction_database">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php connction database</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$servername = &quot;localhost&quot;;
+$username = &quot;root&quot;;
+$password = &quot;2w3e4r5t6y7&quot;;
+$dbname = &quot;stardaytour&quot;;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn-&gt;connect_error) {
+  die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);
+}</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$servername = &quot;localhost&quot;;
+$username = &quot;root&quot;;
+$password = &quot;2w3e4r5t6y7&quot;;
+$dbname = &quot;stardaytour&quot;;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn-&gt;connect_error) {
+  die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);
+}</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_delete_from_table -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_delete_from_table">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php delete from table</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#delete_query
+#get_result_from_update_query
+#close_connction</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#delete_query
+#get_result_from_delete_query
+#close_connction</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_get_result_from_delete_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_get_result_from_delete_query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php get result from delete query</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPTINAL*($#subTable-&gt;deleteBy#forentKey())
+return $result;</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPTINAL*($#subTable-&gt;deleteBy#forentKey())
+return $result;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_get_result_from_select_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_get_result_from_select_query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <return rdf:resource="http://www.semanticweb.org/anas/back_end#json"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php get result from select query</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$rows = array();
+while($r = $result-&gt;fetch_assoc()) {
+    $rows[] = $r;
+}
+$res= json_encode($rows);
+return $res;</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$rows = array();
+while($r = $result-&gt;fetch_assoc()) {
+    $rows[] = $r;
+}
+$res= json_encode($rows);
+return $res;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_get_result_from_update_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_get_result_from_update_query">
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php get result from update query</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">return $result;</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">return $result;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_geter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_geter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#geter"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_argument"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php getter</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function get_#name() {
+    return $this-&gt;#name_of_property;
+  }</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function get_#name() {
+    return $this-&gt;#name_of_property;
+  }</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_argument"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php method</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function #name(#argument)
+{
+#process
+}</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function #name(#argument)
+{
+#process
+}</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model</name>
+        <rdfs:comment>call get_class_Model_code</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_Properties_list -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_Properties_list">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Property"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">call php_model_Properties_list</commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model Properties_list</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">call php_model_Properties_list</template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_Properties_list_code -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_Properties_list_code">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#code"/>
+        <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">def get_Properties_code(columns):
+        properties = &apos;&apos;
+        for column in columns:
+            c = column
+            properties+=(&quot;public $&quot; + c + &quot;;\n&quot;)
+        return properties</content>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model Properties list code</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_class -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_class">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model class</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;?php
+OPTINAL*(include(&quot;#SubTable&quot;.&quot;php&quot;))
+class #Class_name OPTINAL(extends Model)
+{
+  //Properties
+  #Properties_list
+ //methods
+  #methods_list
+}
+?&gt;</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;?php
+OPTINAL(include(&quot;#fileName&quot;))
+class #Class_name OPTINAL(extends #SuperCalssname)
+{
+  //Properties
+  #Properties_list
+ //methods
+  #methods_list
+}
+?&gt;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_getter_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_getter_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#geter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model getter method</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function get_#coloumnName() {
+    return $this-&gt;#coloumnName;
+  }</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function get_#coloumnName() {
+    return $this-&gt;#coloumnName;
+  }</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_insert_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_insert_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model insert method</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function insert() {
+    #php_isert_into_table
+  }</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function insert() {
+    #php_isert_into_table
+  }</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_methods_list -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_methods_list">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model methods_list</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">call php_model_setter_methods
+call php_model_getter_methods
+call php_mode_select_methods
+call php_mode_update_methods
+call php_mode_delete_methods
+call php_mode_insert_methods</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">call php_model_setter_methods
+call php_model_getter_methods
+call php_mode_select_methods
+call php_mode_update_methods
+call php_mode_delete_methods
+call php_mode_insert_methods</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_setter_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_setter_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#seter"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model setter method</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function set_#coloumnName($#coloumnName) {
+    $this-&gt;#coloumnName = $#coloumnName;
+  }</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function set_#coloumnName($#coloumnName) {
+    $this-&gt;#coloumnName = $#coloumnName;
+  }</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_model_update_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_model_update_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#Method"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php model insert method</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function update() {
+    #php_update_from_table
+  }</template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_mysql_argument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_mysql_argument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#argument"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php mysql argument</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$servername, $username, $password</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">argument connction_database</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_mysql_check_connection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_mysql_check_connection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php mysql check connection</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">// Check connection
+if ($#link_connection-&gt;connect_error) {
+    die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);
+}
+echo &quot;Connected successfully&quot;;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_mysql_connction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_mysql_connction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#connction_database"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_mysql_argument"/>
+        <return rdf:resource="http://www.semanticweb.org/anas/back_end#php_conncetion_link"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php mysql connction</name>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$#connction_link = mysqli_connect(#argument);</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process database_connction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_select_form_table -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_select_form_table">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#table"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php select from table</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#select_query
+#get_result_from_select_query
+#close_connction</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#select_query
+#get_result_from_select_query
+#close_connction</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_select_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_select_query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php select query</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$sql = &quot;#select_query&quot;;
+$result = $conn-&gt;query($sql);</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$sql = &quot;#select_query&quot;;
+$result = $conn-&gt;query($sql);</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_seter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_seter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#seter"/>
+        <has_a rdf:resource="http://www.semanticweb.org/anas/back_end#php_argument"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php setter</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function set_#name($#name_of_argument) 
+{
+    $this-&gt;#name_of_property = $#name_of_argument;
+}</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">function set_#name($#name_of_argument) {
+    $this-&gt;#name_of_property = $#name_of_argument;
+  }</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_solutions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_solutions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#solutions"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php solutions</name>
+        <solutionsList rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MVC (recommend)
+laravel ( more recommend)
+scripted code (not recommend)</solutionsList>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MVC (recommend)
+laravel ( more recommend)
+scripted code (not recommend)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_update_from_table -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_update_from_table">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php update from table</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#update_query
+#get_result_from_update_query
+#close_connction</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#connction_database
+#update_query
+#get_result_from_update_query
+#close_connction</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_update_query -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_update_query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#process"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php update query</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$sql = &quot;#update_query&quot;;
+$result = $conn-&gt;query($sql);</template>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$sql = &quot;#update_query&quot;;
+$result = $conn-&gt;query($sql);</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_controller">
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php with extend ModelClass controller</name>
+        <path rdf:datatype="http://www.w3.org/2001/XMLSchema#string">controller/</path>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_model -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_model">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copy php_ModleClass into modle/ModleClass.php
+@ php_with_extentd_ModleClass_calss</commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php with extend ModelClass model</name>
+        <path rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model/</path>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_model_class -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_model_class">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#class"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#model"/>
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></commend>
+        <name>php with extend ModelClass model class</name>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;?php
+OPTINAL * (include(&quot;#SubTable&quot;.&quot;php&quot;))
+class #Class_name extends Model
+{
+  //Properties
+call php_model_Properties_list_code
+ //methods
+  #methods_list
+}
+?&gt;</template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_view -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#php_with_extend_ModelClass_view">
+        <commend rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></commend>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">php with extend ModelClass view</name>
+        <path rdf:datatype="http://www.w3.org/2001/XMLSchema#string">view/</path>
+        <template rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anas/back_end#python -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anas/back_end#python">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anas/back_end#languages"/>
+        <extensionFile>py</extensionFile>
+        <name>python</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
