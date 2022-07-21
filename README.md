@@ -1,3 +1,3 @@
 # backend-web-ontology
 
-this Ontology builted from scratch for soucer code genrtion of backend web
+This Ontology was built from scratch for source code generation of backend web
